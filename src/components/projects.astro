@@ -1,0 +1,58 @@
+---
+import CardImg1 from "../images/project-1.jpg";
+import CardImg2 from "../images/project-2.png";
+import CardImg3 from "../images/project-3.png";
+import ProjectCard from "./projectCard.astro";
+
+const projects = [
+  {
+    img: CardImg1,
+    name: "Gears Zone",
+    description: "In this site people can buy different type of tools.",
+  },
+  {
+    img: CardImg2,
+    name: "Doctors Portal",
+    description: "In this site people can book appointment of Doctors.",
+  },
+  {
+    img: CardImg3,
+    name: "Design Hut",
+    description: "In this site people can buy diefferent type of designs .",
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <style>
+      button {
+        display: block;
+        width: fit-content;
+        border: 1px solid #ff004f;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.5s;
+      }
+      button:hover {
+        background: #ff004f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lg:mx-36">
+      <h1 class="text-5xl mb-10 text-white">My Works</h1>
+      <div class="gap-24 lg:flex justify-center">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+      <button class="flex mx-auto mt-8 text-white px-8 py-2 hover:"
+        >See more</button
+      >
+    </div>
+  </body>
+</html>

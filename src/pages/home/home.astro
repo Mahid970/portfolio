@@ -1,0 +1,47 @@
+---
+import Banner from "../../components/banner.astro";
+
+import Projects from "../../components/projects.astro";
+import Services from "../../components/services.astro";
+import Contact from "../../components/contact.astro";
+
+import Aboutme from "../../components/aboutme.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      hr {
+        width: 40%;
+        height: 3px;
+        margin-top: 10px;
+        border: 0 none;
+        background-image: linear-gradient(-45deg, #f37335 0%, #fdc830 100%);
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div>
+      <Banner />
+      <div class="flex justify-center my-14">
+        <hr />
+        <p class="text-orange-400 mx-3">X</p>
+        <hr />
+      </div>
+      <Aboutme />
+      <div class="flex justify-center my-14">
+        <hr />
+        <p class="text-orange-400 mx-3">X</p>
+        <hr />
+      </div>
+      <Projects />
+      <Services />
+      <Contact />
+    </div>
+  </body>
+</html>

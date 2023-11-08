@@ -1,0 +1,136 @@
+---
+import Logo from ".././images/M__6_-removebg-preview.png";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      .logo {
+        width: 96px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+      }
+      ul {
+        display: flex;
+        justify-content: end;
+      }
+
+      li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-image: linear-gradient(-45deg, #f37335 0%, #fdc830 100%);
+        margin: auto;
+        display: block;
+      }
+      li a:hover::after {
+        width: 100%;
+        transition: width 0.3s linear;
+      }
+      li a:hover {
+        color: coral;
+      }
+
+      .hamburger {
+        position: relative;
+
+        width: 30px;
+        height: 4px;
+        top: -10px;
+        background: white;
+        border-radius: 10px;
+        cursor: pointer;
+        z-index: 2;
+        transition: 0.3s;
+      }
+
+      .hamburger:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+
+        background: white;
+        border-radius: 10px;
+
+        top: 15px;
+        width: 30px;
+        transition: 0.3s;
+      }
+      .toggle-menu {
+        position: absolute;
+        width: 30px;
+        height: 24px;
+        z-index: 3;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .hamburger,
+      .toggle-menu {
+        display: none;
+      }
+
+      .navbar input:checked ~ .hamburger {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      .navbar input:checked ~ .hamburger:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      .navbar input:checked ~ ul {
+        left: 0;
+
+        width: 100%;
+      }
+
+      @media screen and (max-width: 748px) {
+        .hamburger,
+        .toggle-menu {
+          display: block;
+        }
+        .navbar {
+        }
+
+        ul {
+          justify-content: space-evenly;
+          flex-direction: column;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: rgb(15, 73, 199);
+          width: 0;
+          height: 100%;
+          overflow: hidden;
+
+          z-index: 1;
+          transition: width 0.5s;
+        }
+      }
+    </style>
+  </head>
+</html>
+<body>
+  <div class="flex justify-between mx-8 text-white">
+    <img class="logo m-6" src={Logo} alt="logo" />
+    <div class="navbar">
+      <input type="checkbox" class="toggle-menu" />
+      <div class="hamburger"></div>
+      <ul class="menu gap-12 text-white lg:mx-12 text-xl">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/contact/contact">Contact</a></li>
+        <li><a href="/projects/projects">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</body>

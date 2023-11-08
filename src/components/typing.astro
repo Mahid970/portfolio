@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+      }
+      .wrapper {
+        display: flex;
+      }
+      .wrapper .static-text {
+        color: white;
+        font-size: 48px;
+        font-weight: 500;
+      }
+      .wrapper .dynamic-texts {
+        margin-left: 15px;
+        line-height: 75px;
+        height: 75px;
+
+        overflow: hidden;
+      }
+      .dynamic-texts li {
+        list-style: none;
+
+        font-size: 48px;
+        font-weight: 500;
+        top: 0;
+        position: relative;
+        animation: slide 18s steps(6) infinite;
+      }
+      @keyframes slide {
+        100% {
+          top: -450px;
+        }
+      }
+      .dynamic-texts li {
+        position: relative;
+      }
+      .dynamic-texts li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        background-color: rgb(17 24 39);
+        height: 100%;
+        width: 100%;
+        border-left: 4px solid rgb(239 68 68);
+        animation: typing 3s steps(10) infinite;
+      }
+      @keyframes typing {
+        40%,
+        60% {
+          left: calc(100%);
+        }
+        100% {
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="static-text">Expert in</div>
+      <ul class="dynamic-texts text-red-500">
+        <li><span>JavaScript</span></li>
+        <li><span>React</span></li>
+        <li><span>Astro js</span></li>
+        <li><span>Tailwind</span></li>
+        <li><span>Node js</span></li>
+        <li><span>MongoDb</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

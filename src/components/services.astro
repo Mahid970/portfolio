@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Services</title>
+
+    <style>
+      .card {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        background-color: #262626;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: all 0.5s ease;
+      }
+
+      .card:hover {
+        background-color: #ff0051d8;
+
+        transform: translateY(-10px);
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+      }
+      .btn {
+        position: absolute;
+        bottom: 12px;
+        color: #ff0051d8;
+      }
+      .card:hover .btn {
+        color: white;
+      }
+      .fa-arrow {
+        color: #ff0051d8;
+      }
+      .card:hover .fa-arrow {
+        color: white;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/883be402ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="mt-32 mx-36">
+      <div>
+        <h1 class="text-5xl mb-10 text-white">My Services</h1>
+      </div>
+      <div class="gap-24 lg:flex justify-center pb-8">
+        <div class="card p-16">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+          <h2 class="text-3xl mt-4 mb-4">E-commerce site</h2>
+          <p class="text-sm">
+            I can create a complete E-commerce site For your Business. Including
+            Front-End And Back-end
+          </p>
+          <button class="text-xs mt-8 btn"
+            >Learn more <i class="fa-solid ml-1 fa-arrow-right fa-arrow"
+            ></i></button
+          >
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-blog fa-2xl"></i>
+          <h2 class="text-3xl mt-4 mb-4">Blog Site</h2>
+          <p>
+            You will just need a design for your Blog site and I will convert
+            your vission to live.
+          </p>
+          <button class="text-xs mt-8 btn"
+            >Learn more <i class="fa-solid ml-1 fa-arrow-right fa-arrow"
+            ></i></button
+          >
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-user fa-2xl"></i>
+          <h2 class="text-3xl mt-4 mb-4">Personal Portfolio</h2>
+          <p>
+            You will just need a design for your portfolio site and I will
+            convert your vission to live.
+          </p>
+          <button class="text-xs mt-8 btn"
+            >Learn more <i class="fa-solid ml-1 fa-arrow-right fa-arrow"
+            ></i></button
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Form</title>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("dewPrjMLwuppnvpDU");
+      })();
+    </script> -->
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 600px;
+      }
+
+      label,
+      input,
+      textarea {
+        display: block;
+        margin-bottom: 18px;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      label {
+        color: rgb(207, 187, 187);
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+      .button {
+        display: block;
+        width: full;
+        border: 1px solid #ff004f;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.5s;
+      }
+      .button:hover {
+        background: #ff004f;
+      }
+      i {
+        color: white;
+      }
+      i:hover {
+        color: #ff004f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lg:flex mt-32 mx-24">
+      <div class="lg:w-1/2 lg:ml-24 h-3/4 my-auto">
+        <h2 class="text-red-400 text-5xl mb-16">Contact Me</h2>
+
+        <div class="flex mb-6">
+          <i class="fa-solid fa-envelope mr-2 mt-2" style="color: #ff004f;"></i>
+          <p class="text-gray-300 text-xl">mahidujjamn1@gmail.com</p>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-phone mr-2 mt-2" style="color: #ff004f;"></i>
+          <p class="text-gray-300 text-xl">01909624928</p>
+        </div>
+        <div class="flex gap-8 mt-16">
+          <a href="https://github.com/Mahid970" target="_blank"
+            ><i class="fa-brands fa-github fa-2xl"></i></a
+          >
+          <a
+            href="https://www.linkedin.com/in/mahidujjaman-mahid-7bba311aa/"
+            target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a
+          >
+          <a href="https://twitter.com/mahidujjaman1" target="_blank"
+            ><i class="fa-brands fa-instagram fa-2xl"></i></a
+          >
+
+          <a href="https://www.instagram.com/mahidujjaman/" target="_blank"
+            ><i class="fa-brands fa-twitter fa-2xl"></i></a
+          >
+          <a
+            href="https://www.facebook.com/mahidujjamanmahid.1/"
+            target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a
+          >
+        </div>
+      </div>
+      <form class="lg:w-1/2" action="#" method="post">
+        <label for="name">Your Full Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Your Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <input class="button mt-3 text-gray-300" type="submit" value="Send" />
+      </form>
+    </div>
+    <!-- <script>
+      function sendMail() {
+        var params = {
+          name: (document.getElementById("name") as HTMLInputElement).value,
+          email: (document.getElementById("email") as HTMLInputElement).value,
+          message: (document.getElementById("message") as HTMLInputElement)
+            .value,
+        };
+        const serviceID = "service_hg271ul";
+        const templateID = "template_l89lt9h";
+
+       emailjs.send(serviceID, templateID, params);
+        
+      }
+    </script> -->
+  </body>
+</html>
